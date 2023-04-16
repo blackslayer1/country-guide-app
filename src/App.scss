@@ -1,0 +1,200 @@
+.App {
+  text-align: center;
+  .logo{
+    .publicIcon{
+      height: 45px;
+      width: 45px;
+      position: relative;
+      top: 20px;
+    }
+    h2{
+      font-weight: 400;
+    }
+    animation: logoColor 7s infinite;
+  }
+  .countryInfo{
+    visibility: hidden;
+    position: relative;
+    top: 40px;
+    left: 320px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    width: 50%;
+    color: white;
+    padding: 10px;
+    }
+  .searchContainer{
+    position: relative;
+    bottom: 30px;
+    .countryInput{
+      color: black;
+      width: 55%;
+      padding: 15px;
+      font-size: 20px;
+      outline: none;
+      margin-top: 130px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      &::placeholder{
+        color: black;
+        font-size: 17px;
+      }
+    }
+    .searchButton{
+      padding: 15px;
+      width: 20%;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border: none;
+      color: darken(white, 30%);
+      transition: 0.3s all;
+      font-size: 15px;
+      &:hover{
+        color: white;
+      }
+    }
+    .shuffleIcon{
+      color: rgba(255, 255, 255, 0.2);
+      height: 40px;
+      width: 40px;
+      cursor: pointer;
+      transition: 0.3s all;
+      position: relative;
+      left: 10px;
+      top: 13px;
+      &:hover{
+        color: white;
+      }
+    }
+    .infoIcon{
+      visibility: hidden;
+      color: rgba(255, 255, 255, 0.2);
+      height: 45px;
+      width: 45px;
+      cursor: pointer;
+      transition: 0.3s all;
+      position: relative;
+      right: 10px;
+      top: 17px;
+      &:hover{
+        color: white;
+      }
+    }
+  }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  height: 100%;
+  bottom: 105px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  .icons{
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .icon{
+      height: 50px;
+      width: 50px;
+      margin-right: 100px;
+      cursor: pointer;
+    }
+    .directionsIcon{
+      background: #08cab5;
+      border-radius: 50%;
+      color: white;
+      padding: 20px;
+      transition: 0.3s all;
+      &:hover{
+        background: darken(#08cab5, 5%);
+      }
+    }
+    .mapIcon{
+      background: #ff6b6b;
+      border-radius: 50%;
+      color: white;
+      padding: 20px;
+      transition: 0.3s all;
+      &:hover{
+        background: darken(#ff6b6b, 5%);
+      }
+    }
+    .googleIcon{
+      background: #31b6e7;
+      border-radius: 50%;
+      color: white;
+      padding: 20px;
+      transition: 0.3s all;
+      &:hover{
+        background: darken(#31b6e7, 5%);
+      }
+    }
+    .labels{
+      color: white;
+      margin-left: 5px;
+      margin-top: 10px;
+      label{
+        margin-right: 100px;
+      }
+    }
+  }
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: 0.3s all;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body{
+  background-image: url('./img/background.jpg');
+  background-size: cover;
+}
+
+@keyframes logoColor {
+  0%   {color: darken(white, 3%);}
+  25%  {color: darken(white, 10%);}
+  50%  {color: darken(white, 20%);}
+  75%  {color: darken(white, 10%);}
+  100% {color: darken(white, 3%);}
+}
